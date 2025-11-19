@@ -36,14 +36,21 @@
         }
 
     ?>
-    <h1>Edytuj Post</h1>
+    <div class="blogHeader">
+            <h1>MINI CMS -  Edytuj Post</h1>
+    </div>
+    <div class="blogForm">
     <form method="post">
         <label for="title">Tytuł:</label><br>
         <input type="text" id="title" name="title" value="<?php echo htmlspecialchars($row['title']);?>"><br>
         <label for="content">Treść:</label><br>
-        <textarea id="content" name="content" rows="10" cols="50" required><?php echo htmlspecialchars($row['content'])?></textarea><br>
+        <textarea id="content" name="content" rows="20" cols="130" required><?php echo htmlspecialchars($row['content'])?></textarea><br>
         <button type="submit">Zapisz zmiany</button>
+        <button type="none"><a href="admin.php">Wróć do panelu administracyjnego</a></button>
     </form>
-
+    </div>
+    <footer>
+        <h2>Autorem strony jest <a href="https://github.com/meks990">@Maksymilian Zabłocki</a></h2>
+    </footer>
 </body>
 </html>

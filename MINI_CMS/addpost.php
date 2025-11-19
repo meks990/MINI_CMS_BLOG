@@ -19,12 +19,21 @@
         exit();
         }
     ?>
+    <div class="blogHeader">
+            <h1>MINI CMS -  Dodaj Post</h1>
+    </div>
+    <div class="blogForm">
     <form method="POST">
         <label for="title">Tytuł:</label><br>
-        <input type="text" id="title" name="title" required><br><br>
+        <input type="text" id="title" name="title" placeholder="Tytuł twojego artykułu" required><br><br>
         <label for="content">Treść:</label><br>
-        <textarea id="content" name="content" rows="10" cols="30" required></textarea><br><br>
+        <textarea id="content" name="content" rows="10" cols="30" placeholder="Treść twojego artykułu" required></textarea><br><br>
         <button type="submit">Wyślij post</button>
+        <button type="none"><a href="index.php">Wróć do strony głównej</a></button>
     </form>
+    </div>
+    <footer>
+        <h2>Autorem strony jest <a href="https://github.com/meks990">@Maksymilian Zabłocki</a></h2>
+    </footer>
 </body>
 </html>
