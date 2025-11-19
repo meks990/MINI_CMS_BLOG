@@ -1,3 +1,11 @@
+:root {
+    --background: #001d3d;
+    --accent: #FCA311;
+    --grey: #333e47;
+    --hover: #ffd60a;
+    --lightGrey: #4a565f;
+}
+
 * {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0;
@@ -15,7 +23,7 @@ body {
 }
 
 body {
-    background-color: #0077b6;
+    background-color: #000814;
     margin: 20px;
     text-align: center;
 }
@@ -25,7 +33,7 @@ a {
 }
 
 .blogHeader {
-    background-color: #48cae4ff;
+    background-color: var(--grey);
     padding: 20px;
     width: 50%;
     margin: 0 auto 20px auto;
@@ -33,12 +41,12 @@ a {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 .blogHeader a:hover{
-    color: #03045eff;
+    color: var(--hover);
     font-size: 105%;
     transition: 0.3s ease-in-out all;
 }
 .postContainer {
-    background-color: #06aae0;
+    background-color: var(--lightGrey);
     width: 55%;
     padding: 15px;
     margin: 0 auto 20px auto;
@@ -48,18 +56,24 @@ a {
     color: #03045e;
 }
 .postHeader {
-    background-color: #023e8a;
+    background-color: var(--accent);
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 10px;
     color: white;
+    vertical-align: middle;
+}
+.postHeader h2{
+    vertical-align: middle;
+    margin-bottom: 5px;
+    margin-right: 10px;
 }
 .postHeader a {
     color: white;
     font-size: 22px;
 }
 .postHeader a:hover{
-    color: #90e0efff;
+    color: black;
     font-size: 105%;
     transition: 0.3s ease-in-out all;
 }
@@ -69,9 +83,10 @@ a {
 }
 h1{
     font-size: 225%;
+    color: white;
 }
 .addPostButton {
-    background-color: #00b4d8ff;
+    background-color: var(--accent);
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -84,37 +99,36 @@ button a{
     color: black;
 }
 button:hover{
-    background-color: #48cae4ff;
+    background-color: var(--hover);
     transition: 0.3s ease-in-out all;
     font-size: 120%;
 }
 .postContent{
     overflow: hidden;
     height: 125px;
-    background-color: #05bdfa;
-    border: 1px solid #05bdfa;
+    background-color: #acacab;
+    border: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     padding: 10px;
     color: black;
 }
 .postContent2{
-    background-color: #05bdfa;
-    border: 1px solid #05bdfa;
+    background-color: #acacab;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     padding: 10px;
     color: black;
 }
 .loginForm {
-    background-color: #06aae0;
+    background-color: var(--lightGrey );
     width: 30%;
     padding: 20px;
     margin: 0 auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     text-align: left;
-    color: #03045e;
+    color: white;
 }
 input{
     width: 100%;
@@ -130,7 +144,7 @@ label{
     font-weight: bold;
 }
 button{
-    background-color: rgb(3, 193, 231);
+    background-color: var(--accent);
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -143,23 +157,23 @@ button{
     width: 80%;
     margin: 0 auto;
     border-collapse: collapse;
-    border: 2px solid #03045eff;
-    color: #03045eff;
+    border: 2px solid rgb(10, 10, 10);
+    color: black;
 }
 .adminPanel tr{
-    background-color: #06aae0;
+    background-color: #6c6d63;
 }
 .adminPanel th, .adminPanel td {
-    border: 1px solid #03045eff;
+    border: 1px solid black;
     padding: 10px;
     text-align: left;
 }
 .adminPanel th {
-    background-color: #023e8aff;
+    background-color: var(--lightGrey);
     color: white;
 }
 .adminPanel tr:hover{
-    background-color: #90e0efff;
+    background-color: var(--hover);
     transition: 0.3s ease-in-out all;
     font-size: 110%;
     font-weight: bold;
@@ -178,7 +192,7 @@ button{
     transition: 0.3s ease-in-out all;
 }
 .blogForm {
-    background-color: #06aae0;
+    background-color: var(--lightGrey );
     width: 50%;
     padding: 20px;
     margin: 0 auto 20px auto;
@@ -201,7 +215,7 @@ textarea {
     resize: vertical;
 }
 footer{
-    background-color: rgb(11, 186, 221);
+    background-color: var(--accent);
     padding: 10px;
     width: 100%;
     margin-top: 40px;
@@ -226,7 +240,7 @@ footer a:hover{
 }
 .postDate{
     font-size: 14px;
-    color: #023e8aff;
+    color: white;
     font-weight: bold;
     margin-top: 10px;
 }
@@ -239,15 +253,48 @@ footer a:hover{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 img{
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
 }
 .searchButton{
     padding: 8px 16px;
     margin-left: 10px;
     border: none;
     border-radius: 4px;
-    background-color: #00b4d8ff;
+    background-color: var(--accent);
     color: white;
     cursor: pointer;
+    transform: scale(0.8);
 }
+.commentHeader {
+    background-color: var(--accent);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: white;
+    width: 25%;
+    margin: 10px auto 10px auto;
+    vertical-align: middle;
+}   
+.commentContainer {
+    background-color: #b4750e;
+    width: 50%;
+    padding: 15px;
+    margin: 0 auto 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-align: left;
+    color: white;
+}
+.commentContainer img{
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.commentContainer img:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: 0.2s ease-in-out all;
+}
+

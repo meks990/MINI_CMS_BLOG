@@ -23,7 +23,7 @@
             session_start();
 
             if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
-                header('Location: admin.php');
+                header('Location: admin_panel.php');
                 exit();
             }
 
@@ -39,7 +39,7 @@
                 if ($username !== null && $password !== null) {
                     if ($username === 'admin' && password_verify($password, hash_password('admin123', PASSWORD_DEFAULT))) {
                         $_SESSION['loggedin'] = true;
-                        header('Location: admin.php');
+                        header('Location: admin_panel.php');
                         exit();
                     } else {
                         echo "<br><br>";

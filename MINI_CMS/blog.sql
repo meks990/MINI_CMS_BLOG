@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Lis 19, 2025 at 01:49 PM
+-- Generation Time: Lis 19, 2025 at 08:13 PM
 -- Wersja serwera: 10.4.32-MariaDB
 -- Wersja PHP: 8.2.12
 
@@ -35,6 +35,34 @@ CREATE TABLE `comments` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `comments`
+--
+
+INSERT INTO `comments` (`id`, `post_id`, `author`, `content`, `created_at`) VALUES
+(8, 8, 'Karol', 'Git naprawdę uratował mi projekt kilka razy. Świetny opis podstaw.', '2025-11-19 17:37:57'),
+(9, 8, 'Ewa', 'Zawsze miałam problem z branchami, ale po tym wpisie mam jaśniejszy obraz.', '2025-11-19 17:37:57'),
+(10, 8, 'Robert', 'GitHub to must-have. Dzięki za motywacyjny wpis!', '2025-11-19 17:37:57'),
+(11, 9, 'Mateusz', 'Responsywność to podstawa. Świetnie wytłumaczone!', '2025-11-19 17:37:57'),
+(12, 9, 'Julia', 'Mobile-first to złoto, sama tak projektuję.', '2025-11-19 17:37:57'),
+(14, 10, 'Jan', 'Bardzo motywujący wpis. Algorytmy faktycznie rozwijają logiczne myślenie.', '2025-11-19 17:37:57'),
+(15, 10, 'Magda', 'Ja zaczynałam od sortowania bąbelkowego. Fajny wstęp.', '2025-11-19 17:37:57'),
+(16, 10, 'Bartek', 'LeetCode naprawdę daje w kość, ale warto!', '2025-11-19 17:37:57'),
+(17, 11, 'Sandra', 'JavaScript na początku jest trudny, ale praktyka robi swoje.', '2025-11-19 17:37:57'),
+(18, 11, 'Michał', 'Dobry punkt o DOM. Ja długo nie rozumiałem, jak z nim pracować.', '2025-11-19 17:37:57'),
+(19, 11, 'Natalia', 'Regularność nauki naprawdę działa. Dzięki za wpis!', '2025-11-19 17:37:57'),
+(20, 12, 'Igor', 'SQL jest bardzo przydatny. Fajnie wyjaśnione podstawy.', '2025-11-19 17:37:57'),
+(21, 12, 'Weronika', 'JOINy to był mój koszmar, ale teraz idzie coraz lepiej.', '2025-11-19 17:37:57'),
+(23, 13, 'Emilia', 'Pytest jest genialny. Cieszę się, że o nim wspomniałeś.', '2025-11-19 17:37:57'),
+(26, 14, 'Oskar', 'Popełniałem większość z tych błędów na początku. Dzięki za wskazówki.', '2025-11-19 17:37:57'),
+(27, 14, 'Laura', 'Komentowanie kodu to podstawa. Dobry artykuł!', '2025-11-19 17:37:57'),
+(28, 14, 'Piotrek', 'Przeglądy kodu naprawdę pomagają. Potwierdzam!', '2025-11-19 17:37:57'),
+(29, 15, 'Marta', 'Zgadzam się w 100%. Małe projekty są najlepsze na start.', '2025-11-19 17:37:57'),
+(30, 15, 'Dominik', 'Właśnie kończę swój pierwszy mini projekt i to świetna zabawa.', '2025-11-19 17:37:57'),
+(31, 15, 'Kamil', 'Dobry wpis! Motywuje do robienia małych rzeczy regularnie.', '2025-11-19 17:37:57'),
+(42, 3, 'Alicja', 'Bardzo ciekawy wpis! Motywacja w codziennym programowaniu to wyzwanie, ale masz rację, że małe cele naprawdę pomagają utrzymać regularność. Dzięki za inspirację – od dziś zacznę spisywać swoje postępy, żeby widzieć realny rozwój.', '2025-11-19 17:42:35'),
+(44, 12, 'Komentarz testowy', 'Sprawdzam działanie skryptu ', '2025-11-19 18:36:18');
+
 -- --------------------------------------------------------
 
 --
@@ -55,8 +83,6 @@ CREATE TABLE `posts` (
 INSERT INTO `posts` (`id`, `title`, `content`, `created_at`) VALUES
 (3, 'Jak znaleźć motywację do codziennego programowania?', 'Motywacja w programowaniu to temat, który wraca jak bumerang, zwłaszcza u osób uczących się samodzielnie. Łatwo wpaść w pułapkę przeglądania nieskończonych tutoriali, a trudno utrzymać regularność w praktyce. Jednym z najskuteczniejszych sposobów na utrzymanie motywacji jest ustalenie małych, konkretnych celów. Zamiast obiecywać sobie, że napiszesz własną aplikację społecznościową, postaw na coś mniejszego, jak implementacja jednego widoku lub funkcji. Małe sukcesy budują pewność siebie i zwiększają chęć do dalszej pracy.\r\n\r\nDrugim ważnym elementem jest budowanie rutyny. Nawet 20–30 minut dziennie potrafi zdziałać cuda, jeśli staje się nawykiem. Podobnie jak w nauce języka obcego, regularność jest kluczowa. Kiedy kodowanie wejdzie Ci w krew, stanie się naturalną częścią dnia.\r\n\r\nWarto również dokumentować postępy. Może to być dziennik, repozytorium, blog lub nawet krótkie wpisy na social mediach. Widząc, jak wiele zrobiłeś w ostatnich tygodniach, nabierzesz energii, by iść dalej.\r\n\r\nNie zapominaj też o społeczności. Programowanie nie musi być samotną drogą — fora, grupy i platformy pomagają utrzymać motywację oraz dają możliwość zadawania pytań, wymiany wiedzy i obserwowania pracy bardziej doświadczonych osób.\r\n\r\nNajważniejsze jednak jest to, by programowanie sprawiało Ci przyjemność. Jeśli projekt, nad którym pracujesz, Cię nudzi — zmień go. Motywacja rodzi się tam, gdzie pojawia się ciekawość.', '2025-11-18 20:32:31'),
 (4, 'Dlaczego małe projekty uczą najwięcej?', 'W świecie programowania często mówi się o wielkich aplikacjach, ogromnych systemach i skomplikowanych architekturach, ale prawda jest taka, że to właśnie małe projekty uczą najwięcej. Kiedy zaczynamy tworzyć coś niewielkiego, coś na własne potrzeby, nagle okazuje się, że każdy detal ma znaczenie. Zderzamy się z prawdziwymi problemami — od poprawnej walidacji formularzy, przez obsługę błędów, aż po estetykę interfejsu. I to właśnie te doświadczenia budują naszą praktyczną wiedzę szybciej niż jakikolwiek kurs.\r\n\r\nW małym projekcie mamy pełną kontrolę. Możemy eksperymentować z technologiami, testować nowe pomysły, a gdy coś nie działa, po prostu wracamy krok wcześniej i próbujemy inaczej. Nie ma presji czasu, nie ma zespołu czekającego na nasz commit — jest tylko czysta nauka i satysfakcja z tworzenia czegoś własnego.\r\n\r\nWarto też zauważyć, że małe projekty często przeradzają się w większe. Blog pisany „na szybko” może z czasem stać się poważnym systemem CMS. Prosty skrypt automatyzujący jeden proces może urosnąć do wewnętrznego narzędzia firmowego. A to daje ogromną motywację, bo widzimy realny postęp, zbudowany krok po kroku.\r\n\r\nNa koniec najważniejsze: małe projekty pokazują, że programowanie to proces, nie wyścig. Chodzi o to, by codziennie nauczyć się czegoś nowego, a efekt będzie naturalną konsekwencją. Dlatego warto zaczynać od małych rzeczy — bo z nich rodzą się duże umiejętności.', '2025-11-19 10:54:26'),
-(6, 'Jak zacząć naukę Pythona?', 'Python to język programowania, który wyróżnia się prostą składnią i ogromną społecznością. Najlepiej zacząć od podstaw: zmiennych, typów danych, pętli i funkcji. Praktyka jest kluczem — najlepiej pisać małe programy, takie jak kalkulatory czy gry w zgadywanie liczb. Ważne jest również korzystanie z dokumentacji oraz tutoriali online. Po opanowaniu podstaw warto spróbować projektów, które pozwolą wykorzystać bibliotekę standardową i popularne pakiety, np. NumPy do obliczeń matematycznych czy Matplotlib do wizualizacji danych. Regularność, małe cele i dokumentowanie postępów pomagają utrzymać motywację i skutecznie uczyć się Pythona.', '2025-11-19 12:33:52'),
-(7, 'Najlepsze praktyki w CSS', 'CSS to język stylizacji, który pozwala tworzyć atrakcyjne interfejsy użytkownika. Najważniejsze jest organizowanie kodu w sposób czytelny, np. stosowanie metodologii BEM lub SMACSS. Ważne jest unikanie nadmiarowych selektorów, wykorzystywanie zmiennych CSS i tworzenie responsywnych layoutów za pomocą flexboxa lub gridu. Równie istotne jest testowanie projektu na różnych urządzeniach i przeglądarkach. Warto też korzystać z preprocesorów, takich jak SASS lub LESS, które ułatwiają zarządzanie stylem w większych projektach i skracają czas tworzenia interfejsów.', '2025-11-19 12:33:52'),
 (8, 'Git i kontrola wersji', 'Git to system kontroli wersji, który umożliwia śledzenie zmian w kodzie i współpracę w zespole. Podstawowe operacje to init, add, commit oraz push i pull. Ważne jest tworzenie gałęzi (branch) dla nowych funkcji i ich późniejsze scalanie (merge) z główną gałęzią. Regularne commitowanie pozwala zachować historię zmian, a opis commitów ułatwia orientację w projekcie. Dodatkowo, platformy takie jak GitHub lub GitLab pozwalają na przeglądanie kodu, zgłaszanie problemów i współpracę z innymi programistami. Git jest niezbędnym narzędziem w profesjonalnym programowaniu.', '2025-11-19 12:33:52'),
 (9, 'Tworzenie responsywnych stron WWW', 'Responsywność strony oznacza, że jej wygląd i funkcjonalność dostosowują się do różnych rozdzielczości ekranów. Kluczowe narzędzia to media queries, flexbox i grid. Projektowanie mobile-first pomaga skupić się na najważniejszych funkcjach i poprawia wydajność. Testowanie na różnych urządzeniach jest konieczne, aby upewnić się, że strona wygląda dobrze zarówno na smartfonach, tabletach, jak i komputerach stacjonarnych. Dodatkowo warto pamiętać o optymalizacji obrazów i minimalizowaniu zbędnego kodu, co wpływa na szybkość ładowania i wygodę użytkownika.', '2025-11-19 12:33:52'),
 (10, 'Dlaczego warto uczyć się algorytmów?', 'Algorytmy to podstawy programowania, które pozwalają rozwiązywać problemy w efektywny sposób. Nauka algorytmów rozwija logiczne myślenie i umiejętność planowania kodu. Warto zacząć od podstawowych struktur danych, takich jak tablice, listy, stosy czy kolejki, a następnie przejść do bardziej zaawansowanych algorytmów sortowania, wyszukiwania i grafów. Rozwiązywanie zadań na platformach typu LeetCode czy HackerRank pomaga utrwalić wiedzę i przygotowuje do rozmów rekrutacyjnych. Algorytmy nie tylko przyspieszają kodowanie, ale także pomagają pisać bardziej optymalny i skalowalny kod.', '2025-11-19 12:33:52'),
@@ -91,7 +117,7 @@ ALTER TABLE `posts`
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
 -- AUTO_INCREMENT for table `posts`
