@@ -8,7 +8,6 @@
 </head>
 <body>
     <?php
-    // dodaj sprawdzenie czy użytkownik jest zalogowany 
         require_once ('config.php');
         session_start();
         if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {

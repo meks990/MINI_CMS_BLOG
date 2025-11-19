@@ -14,8 +14,10 @@
         $result = mysqli_query($con, $q);
         $post = mysqli_fetch_assoc($result);
         if ($post) {
+            echo "<div class='postContainer'>";
             echo "<h1>" . htmlspecialchars($post['title']) . "</h1>";
             echo "<p>" . nl2br(htmlspecialchars($post['content'])) . "</p>";
+            echo "</div>";
         } else {
             echo "<p>Post not found.</p>";
         }
